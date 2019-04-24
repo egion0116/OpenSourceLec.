@@ -1,0 +1,27 @@
+개발방향
+
+개발할 기능들 명세
+- 천안여행
+- 그 안의 버스노선, 근처 고속도로 휴게소, 지역문화(음식, 볼거리...), 숙소...(캠핑장), 여행사
+- 관광지 추천
+- 날씨 자동추정(미세먼지에 따라서 여행이 괜찮은지... 추천)
+- 한곳을 정해서 그 근처의 편의시설(편의점, 와이파이, 화장실, 주차장) 안내
+
+-> 네이버 or 다음 지도 API를 이용해서 구현시도 계획...
+-> 외부적인 UI는 HTML CSS -> PC나 모바일로 쉽게 볼 수 있다.(반응형 웹)
+-> PC 에서는 단순하게 브라우저로 보면 되는데, 모바일같은 경우... 앱 내부에서 웹을 불러올 수 있게 하면 
+
+
+구체적인 구현화 계획
+
+버전관리 : GitHub + SorceTree
+
+Front End Dev..
+-> Daum or Naver Map Api : JavaScript..
+-> UI Design : HTML + CSS 
+
+Back End Dev..
+-> WAS : Appache Web Server
+-> Back End Lang -> AngularJS?? NodeJS.?? 
+-> DBMS : MySQL
+-> Parsing : JSON Parse... 
