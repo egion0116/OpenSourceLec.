@@ -6,8 +6,12 @@ var app = http.createServer((req, res) => {
     var _url = req.url;
     var query_string = url.parse(_url, true);
 
+    fs.readFile('./index.html', 'utf8', (err, data) => {
+        if (err) throw err;
+        res.write(data);
+    })
+
     res.writeHead(200);
-    res.write(fs.readFileSync(__dirname + '/index.html'));
     res.end();
 });
 
