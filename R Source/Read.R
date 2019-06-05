@@ -21,3 +21,5 @@ Incheon_Seogu_FasNum <- nrow(Incheon_Seogu);
 # 인천 중구
 Incheon_Junggu <- read.csv("../인천광역시_중구_장애인복지시설현황_20190520.csv");
 Incheon_Junggu_FasNum <- nrow(Incheon_Junggu);
+
+Incheon_Namdonggu

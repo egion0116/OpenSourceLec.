@@ -6,6 +6,9 @@
         <!-- 다음 지도 API -->
         <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=41165f7b1a63093768992d65f95e3a9a"></script>
 
+        <!-- CSS 불러오기 -->
+        <link rel="stylesheet" href="index.css">
+
         <title>
             Test
         </title>
@@ -15,15 +18,8 @@
         <a href="/?id=stat"><h1>통계</h1></a>
         <a href="/?id=intro"><h1>소개</h1></a>
 
-        <div id="map" style="width:500px; height:400px;"></div>
-        <script>
-                var container = document.getElementById('map');
-                var options = {
-                    center: new daum.maps.LatLng(33.450701, 126.570667),
-                    level: 3
-                };
-        
-                var map = new daum.maps.Map(container, options);
-        </script>
+        <div id="map"></div>
+        <!-- div 태그, id : map 에대한 스크립트 -->
+        <script type='text/javascript' src='./mapBasic.js'></script>
     </body>
 </html>
