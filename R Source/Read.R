@@ -22,4 +22,8 @@ Incheon_Seogu_FasNum <- nrow(Incheon_Seogu);
 Incheon_Junggu <- read.csv("../인천광역시_중구_장애인복지시설현황_20190520.csv");
 Incheon_Junggu_FasNum <- nrow(Incheon_Junggu);
 
-Incheon_Namdonggu
+type <- summary(Incheon_Namgu[,1]);
+detail_type <- summary(Incheon_Namgu[,2]);
+
+for (i in 1:length(type)) cat(names(type)[i], " : ", type[i], "\n");
+for (i in 1:length(detail_type)) cat(names(detail_type)[i], " : ", detail_type[i], "\n");
