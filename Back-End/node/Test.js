@@ -1,6 +1,7 @@
 var http = require('http');
 var fs = require('fs');
 var url = require('url');
+var R = require('r-script');
 
 // 루트에 대한 문서 불러오기
 function main_root(req, res){

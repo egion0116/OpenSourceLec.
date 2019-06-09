@@ -1,25 +1,25 @@
-# ÀÎÃµ °è¾ç±¸
-Incheon_GeYang <- read.csv("../ÀÎÃµ±¤¿ª½Ã_°è¾ç±¸_Àå¾ÖÀÎº¹Áö½Ã¼³_´ÜÃ¼_ÇöÈ²_20180501.csv");
+# ì¸ì²œ ê³„ì–‘êµ¬
+Incheon_GeYang <- read.csv("../ì¸ì²œê´‘ì—­ì‹œ_ê³„ì–‘êµ¬_ì¥ì• ì¸ë³µì§€ì‹œì„¤_ë‹¨ì²´_í˜„í™©_20180501.csv");
 Incheon_GeYang_FasNum <- nrow(Incheon_GeYang);
 
-# ÀÎÃµ ³²±¸
-Incheon_Namgu <- read.csv("../ÀÎÃµ±¤¿ª½Ã_³²±¸_Àå¾ÖÀÎº¹Áö½Ã¼³_ÇöÈ²_20170930.csv");
+# ì¸ì²œ ë‚¨êµ¬
+Incheon_Namgu <- read.csv("../ì¸ì²œê´‘ì—­ì‹œ_ë‚¨êµ¬_ì¥ì• ì¸ë³µì§€ì‹œì„¤_í˜„í™©_20170930.csv");
 Incheon_Namgu_FasNum <- nrow(Incheon_Namgu);
 
-# ÀÎÃµ ³²µ¿±¸
-Incheon_Namdonggu <- read.csv("../ÀÎÃµ±¤¿ª½Ã_³²µ¿±¸_Àå¾ÖÀÎº¹Áö½Ã¼³ÇöÈ²_20181126.csv");
+# ì¸ì²œ ë‚¨ë™êµ¬
+Incheon_Namdonggu <- read.csv("../ì¸ì²œê´‘ì—­ì‹œ_ë‚¨ë™êµ¬_ì¥ì• ì¸ë³µì§€ì‹œì„¤í˜„í™©_20181126.csv");
 Incheon_Namdonggu_FasNum <- nrow(Incheon_Namdonggu);
 
-# ÀÎÃµ ºÎÆò±¸
-Incheon_Bupyung <- read.csv("../ÀÎÃµ±¤¿ª½Ã_ºÎÆò±¸_Àå¾ÖÀÎº¹Áö½Ã¼³__20180823.csv");
+# ì¸ì²œ ë¶€í‰êµ¬
+Incheon_Bupyung <- read.csv("../ì¸ì²œê´‘ì—­ì‹œ_ë¶€í‰êµ¬_ì¥ì• ì¸ë³µì§€ì‹œì„¤__20180823.csv");
 Incheon_Bupyung_FasNum <- nrow(Incheon_Bupyung);
 
-# ÀÎÃµ ¼­±¸
-Incheon_Seogu <- read.csv("../ÀÎÃµ±¤¿ª½Ã_¼­±¸_Àå¾ÖÀÎº¹Áö½Ã¼³_2017³â_5¿ù_.csv");
+# ì¸ì²œ ì„œêµ¬
+Incheon_Seogu <- read.csv("../ì¸ì²œê´‘ì—­ì‹œ_ì„œêµ¬_ì¥ì• ì¸ë³µì§€ì‹œì„¤_2017ë…„_5ì›”_.csv");
 Incheon_Seogu_FasNum <- nrow(Incheon_Seogu);
 
-# ÀÎÃµ Áß±¸
-Incheon_Junggu <- read.csv("../ÀÎÃµ±¤¿ª½Ã_Áß±¸_Àå¾ÖÀÎº¹Áö½Ã¼³ÇöÈ²_20190520.csv");
+# ì¸ì²œ ì¤‘êµ¬
+Incheon_Junggu <- read.csv("../ì¸ì²œê´‘ì—­ì‹œ_ì¤‘êµ¬_ì¥ì• ì¸ë³µì§€ì‹œì„¤í˜„í™©_20190520.csv");
 Incheon_Junggu_FasNum <- nrow(Incheon_Junggu);
 
 type <- summary(Incheon_Namgu[,1]);
