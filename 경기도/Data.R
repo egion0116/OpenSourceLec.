@@ -29,7 +29,7 @@ DB_Port=3306;
 
 MyDB = dbConnect(MySQL(), user=DB_User, password=DB_PW, dbname=DB_Name, host=DB_Host, port=DB_Port);
 dbWriteTable(MyDB, name='st_fasc', value=st_fasc);
-dbWriteTable(MyDB, name='day_fasc', value=st_fasc);
-dbWriteTable(MyDB, name='care_fasc', value=st_fasc);
-dbWriteTable(MyDB, name='critical_fasc', value=st_fasc); 
- 
+dbWriteTable(MyDB, name='day_fasc', value=day_fasc);
+dbWriteTable(MyDB, name='care_fasc', value=care_fasc);
+dbWriteTable(MyDB, name='critical_fasc', value=critical_fasc); 
+dbWriteTable(MyDB, name='dis_all', value=dis_all);  
