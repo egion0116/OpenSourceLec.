@@ -1,26 +1,11 @@
 const Data = require('./Data');
-const async = require('async');
+const async = require('JSON');
 
-function ToPos(str)
-{
-    async.waterfall([
-        function(){
-            var Pos_Dat = {
-                Lati : Data.GetLati(str),
-                Longi : Data.GetLongi(str)
-            }
-        },
-        function(){
-            return Pos_Dat;
-        }
-    ])
+async function aSyncCall(){
+    console.log('start');
+    var List = await Data.GetTableList();
+    console.log(a);
+    console.log('end');
 }
 
-async.waterfall([
-    function(){
-        var pos1 = Data.GetTableList();
-    },
-    function(){
-        console.log(pos1);
-    }
-]);
+aSyncCall();
