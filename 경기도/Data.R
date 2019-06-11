@@ -18,9 +18,6 @@ care_fasc <- read.csv("경기도 장애인주간보호시설현황.csv");
 # 중증장애인 요양시설
 critical_fasc <- read.csv("경기도 중증장애인요양시설 현황.csv");
 
-# 등록 장애인 집계현황
-dis_all <- read.csv("등록장애인집계현황(시군별,성별,등급별).csv");
-
 DB_User = 'myproj';
 DB_PW = '06dktmskf)^';
 DB_Name='Fascility';

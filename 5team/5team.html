@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <!--
 	Story by HTML5 UP
 	html5up.net | @ajlkn
@@ -8,6 +8,8 @@
 	<head>
 		<title>team 5</title>
 		<meta charset="utf-8">
+		 <!-- 다음 지도 API -->
+		 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=41165f7b1a63093768992d65f95e3a9a"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -79,9 +81,26 @@
 				<!-- Five -->
 					<section class="wrapper style1 align-center">
 						<div class="inner">
-							<h2><b>MAP</h2></b>
+							<h2><b>수도권 지역 복지시설 분포</h2></b>
 							
 						</div>
+
+				<!-- One -->
+				<h1 id="logo">
+				<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+					<div class="image" id = "map">
+				   </div>
+				   <div class="content">
+						<h1 style = "color : maroon"><b>수도권 통계</h1></b>
+						    
+						<ul class="actions stacked">
+							<li><a href="#first" class="button big wide smooth-scroll-middle">Get Started</a></li>
+						</ul>
+				   </div>
+					
+					<!-- div 태그, id : map 에대한 스크립트 -->
+					<script type='text/javascript' src='./MapJs/Marker.js'></script>
+				</section>
 				
 				
 
