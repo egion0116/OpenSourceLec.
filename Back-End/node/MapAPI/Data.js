@@ -1,6 +1,5 @@
 module.exports = {
     mysql : require('mysql'),
-    async : require('async'),
 
     // 커넥션 만들고 열기
     OpenCon : async function(){
@@ -9,7 +8,7 @@ module.exports = {
                 host : 'localhost',
                 user : 'myproj',
                 password : '06dktmskf)^',
-                database : 'Project'
+                database : 'Fascility'
             });
     
             con.connect((err) => {
@@ -35,7 +34,8 @@ module.exports = {
 
                 // 테이블의 리스트를 읽어 저장한다.
                 for (var i = 0; i < result.length; i++){
-                    Table_List.push(result[i].Tables_in_Project);
+                    // 일반적인 코드를 작성하기 위해 수정해야하는 부분이 있다!
+                    Table_List.push(result[i].Tables_in_Fascility);
                 }
 
                 con.end();

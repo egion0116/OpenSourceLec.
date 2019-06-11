@@ -1,10 +1,13 @@
-const Data = require('./Data');
+const PosJson = require('./PosJson');
 
-async function aSyncCall(){
-    console.log('start');
-    var List = await Data.GetTableList();
-    await Data.GetLati(List[1]);
-    console.log('end');
+async function AsyncCall(){
+    var Pre_Json = await PosJson.AllPosToJson();
+
+    console.log(Pre_Json);
+
+    return new Promise(resolve =>{
+        resolve(Pre_Json);
+    })
 }
 
-aSyncCall();
+AsyncCall();

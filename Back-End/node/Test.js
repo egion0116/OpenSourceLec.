@@ -1,6 +1,7 @@
 var http = require('http');
 var fs = require('fs');
-var url = require('url');
+var PosJson = require('./MapAPI/PosJson');
+var Data = require('./MapAPI/Data');
 
 // 루트에 대한 문서 불러오기
 function main_root(req, res){
@@ -27,7 +28,7 @@ function map_script(req, res, targ){
 }
 
 // 서버 콜벡 로직
-var app = http.createServer((req, res) => {
+var app = http.createServer(async function(req, res){
     var _url = req.url;
 
     if (_url === '/')
@@ -43,13 +44,14 @@ var app = http.createServer((req, res) => {
     }
     if (_url === '/MapAPI/Marker.js')
     {
-        map_script(req, res, _url);
+        var script_code = fs.readFileSync('.' + _url, 'utf8');
+        var Location = await PosJson.AllPosToJson();
+        
+        res.writeHead(200, {'Content-Type':'text/javascript'});
+        res.write(`Location = ${Location};`);
+        res.end(script_code);
     }
     if (_url === '/MapAPI/MapPrac.js')
-    {
-        map_script(req, res, _url);
-    }
-    if (_url === '/MapAPI/Data.js')
     {
         map_script(req, res, _url);
     }
