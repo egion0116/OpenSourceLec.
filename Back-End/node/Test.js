@@ -1,7 +1,6 @@
 var http = require('http');
 var fs = require('fs');
 var url = require('url');
-var R = require('r-script');
 
 // 루트에 대한 문서 불러오기
 function main_root(req, res){
@@ -12,19 +11,19 @@ function main_root(req, res){
 }
 
 // CSS 불러오기
-function css(req, res){
-    var css = fs.readFileSync('./index.css', 'utf8');
+function css(req, res, targ){
+    var css = fs.readFileSync('.' + targ, 'utf8');
 
     res.writeHead(200, {'Content-Type':'text/css'});
     res.end(css);
 }
 
 // Javascript 불러오기
-function script(req, res){
-    var mapBasic = fs.readFileSync('./mapBasic.js', 'utf8');
+function map_script(req, res, targ){
+    var script_code = fs.readFileSync('.' + targ, 'utf8');
         
     res.writeHead(200, {'Content-Type':'text/javascript'});
-    res.end(mapBasic);
+    res.end(script_code);
 }
 
 // 서버 콜벡 로직
@@ -36,14 +35,22 @@ var app = http.createServer((req, res) => {
         main_root(req, res);
     }
     if (_url === '/index.css'){
-        css(req, res);
+        css(req, res, _url);
     }
-    if (_url === '/mapBasic.js')
+    if (_url === '/MapAPI/mapBasic.js')
     {
-        script(req, res);
+        map_script(req, res, _url);
+    }
+    if (_url === '/MapAPI/Marker.js')
+    {
+        map_script(req, res, _url);
+    }
+    if (_url === '/MapAPI/MapPrac.js')
+    {
+        map_script(req, res, _url);
     }
 
-    res.writeHead(200);
+    res.writeHead(404);
     res.end();
 });
 
