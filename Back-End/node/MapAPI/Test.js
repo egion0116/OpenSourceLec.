@@ -1,10 +1,9 @@
 const Data = require('./Data');
-const async = require('JSON');
 
 async function aSyncCall(){
     console.log('start');
     var List = await Data.GetTableList();
-    console.log(a);
+    await Data.GetLati(List[1]);
     console.log('end');
 }
 

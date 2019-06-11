@@ -50,12 +50,12 @@ module.exports = {
         var con = await this.OpenCon();
 
         return new Promise(resolve => {
+            // 경도의 배열
+            var arr_longi = [];
+
             // SQL로 경도를 알아낸다.
             con.query('SELECT WGS84Longi FROM ' + param, function(err, result, field){
                 if (err) throw err;
-            
-                // 경도의 배열
-                var arr_longi = [];
                 
                 for (var i = 0; i < result.length; i++){
                     arr_longi.push(result[i].WGS84Longi);
@@ -70,21 +70,22 @@ module.exports = {
 
     // 위도값을 반환
     GetLati : async function(param){
-        var con = this.OpenCon();
+        var con = await this.OpenCon();
 
         return new Promise(resolve => {
+            // 위도 배열
+            var arr_lati = [];
+
             con.query('SELECT WGS84Lati FROM critical_fasc', function(err, result, field){
 
                 if (err) throw err;
-                
-                // 위도 배열
-                var arr_lati = [];
                 
                 for (var i = 0; i < result.length; i++){
                     arr_lati.push(result[i].WGS84Lati);
                 }
                 
                 con.end();
+
                 resolve(arr_lati);
             })
         });
