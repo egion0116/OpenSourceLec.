@@ -49,6 +49,10 @@ var app = http.createServer((req, res) => {
     {
         map_script(req, res, _url);
     }
+    if (_url === '/MapAPI/Data.js')
+    {
+        map_script(req, res, _url);
+    }
 
     res.writeHead(404);
     res.end();
